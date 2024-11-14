@@ -4,7 +4,7 @@ import "./globals.css";
 import { store } from './store'
 import { Provider } from 'react-redux'
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+
 import Footer from "./components/Footer";
 
 
