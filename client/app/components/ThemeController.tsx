@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThemeController = ({ setTheme }: { setTheme: (theme: string) => void }) => {
+const ThemeController = () => {
 
     //  const handleChangingTheme = () => {
     //     setTheme(prevTheme => prevTheme === "myblacktheme" ? "mywhitetheme" : "myblacktheme");

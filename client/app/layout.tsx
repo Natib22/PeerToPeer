@@ -13,16 +13,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [theme , setTheme] = useState("mywhitetheme")
+  
   return (
     <Provider store={store}>
       
-         <html lang="en" data-theme = {theme}>
+         <html lang="en" >
          
           
       <body className="flex flex-col  min-h-screen">
       <div className="flex flex-col  min-h-screen">
-      <Navbar setTheme = {setTheme}/>
+      <Navbar />
             {children}
           </div>
       

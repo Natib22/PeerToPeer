@@ -3,7 +3,7 @@ import React from 'react'
 import ThemeController from './ThemeController'
 import { useRouter } from 'next/navigation'
 
-const Navbar = ({ setTheme }: { setTheme: (theme: string) => void }) => {
+const Navbar = () => {
   const router  = useRouter()
   return (<div className='flex-col   justify-center items-center'>
     <div className="flex justify-between border-b-[1px] border-base-300 navbar bg-base-100 ">
@@ -66,7 +66,7 @@ const Navbar = ({ setTheme }: { setTheme: (theme: string) => void }) => {
 
   <div className="navbar-end w-1/4">
     <a className="btn btn-ghost btn-sm ">Login</a>
-  <ThemeController setTheme = {setTheme} />
+  <ThemeController  />
   </div>
 
 
