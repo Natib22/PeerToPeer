@@ -1,6 +1,19 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 
 const ThemeController = () => {
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  }, []);
+
+  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const theme = event.target.value;
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+  };
 
     //  const handleChangingTheme = () => {
     //     setTheme(prevTheme => prevTheme === "myblacktheme" ? "mywhitetheme" : "myblacktheme");
@@ -51,8 +64,9 @@ const ThemeController = () => {
         type="radio"
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-        aria-label="Default"
-        value="forest" />
+        aria-label="dracula"
+        value="dracula"
+        onChange={handleThemeChange} />
     </li>
     <li>
       <input
@@ -60,7 +74,8 @@ const ThemeController = () => {
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
         aria-label="Dark"
-        value="myblacktheme" />
+        value="myblacktheme"
+        onChange={handleThemeChange} />
     </li>
 
     <li>
@@ -69,7 +84,8 @@ const ThemeController = () => {
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
         aria-label="Light"
-        value="mywhitetheme" />
+        value="mywhitetheme" 
+        onChange={handleThemeChange}/>
     </li>
 
     <li>
@@ -78,31 +94,37 @@ const ThemeController = () => {
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
         aria-label="Lofi"
-        value="lofi" />
+        value="lofi"
+        onChange={handleThemeChange} />
     </li>
-    <li>
-      <input
-        type="radio"
-        name="theme-dropdown"
-        className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-        aria-label="Cyberpunk"
-        value="cyberpunk" />
-    </li>
+    
     <li>
       <input
         type="radio"
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
         aria-label="Valentine"
-        value="valentine" />
+        value="valentine"
+        onChange={handleThemeChange} />
     </li>
     <li>
       <input
         type="radio"
         name="theme-dropdown"
         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-        aria-label="Aqua"
-        value="aqua" />
+        aria-label="business"
+        value="business" 
+        onChange={handleThemeChange}/>
+    </li>
+
+    <li>
+      <input
+        type="radio"
+        name="theme-dropdown"
+        className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+        aria-label="night"
+        value="night" 
+        onChange={handleThemeChange}/>
     </li>
   </ul>
 </div>
