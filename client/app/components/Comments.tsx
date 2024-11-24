@@ -11,7 +11,8 @@ interface Comment {
   createdAt: string;
 } 
 
-const Comments:React.FC<Comment>   = ({id , username , profileImage , description , createdAt , upvotes}) => {
+const Comments:React.FC<Comment>   = ({ username , profileImage , description , createdAt , upvotes}) => {
+  
   return (
     
 
@@ -44,7 +45,7 @@ const Comments:React.FC<Comment>   = ({id , username , profileImage , descriptio
                     </svg>
                 </button>
     <span className="text-success">{upvotes}</span>
-              <button className="flex justify-center items-center hover:bg-base-300 w-full h-12 rounded-b-md">
+              <button  className="flex justify-center items-center hover:bg-base-300 w-full h-12 rounded-b-md">
               <svg
                 xmlns="http://www.w3.org/
                 2000/svg"
