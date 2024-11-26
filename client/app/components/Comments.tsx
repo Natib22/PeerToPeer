@@ -11,7 +11,7 @@ interface Comment {
   createdAt: string;
 } 
 
-const Comments:React.FC<Comment>   = ({id , username , profileImage , description , createdAt , upvotes}) => {
+const Comments:React.FC<Comment>   = ({ username , profileImage , description , createdAt , upvotes}) => {
   return (
     
 
